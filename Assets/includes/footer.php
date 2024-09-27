@@ -27,35 +27,35 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-md-6 text-md-start mb-3 mb-md-0">
-                            <img src="Assets/img/logoTipos/Logo_PV_Pto.png" alt="Logotipo" class="footer-logo">
+                            <img src="../Assets/img/logoTipos/logoIPBVerdeSF.png" alt="Logotipo" class="footer-logo">
                         </div>
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0 ">
-                    <h5 class="text-uppercase">Contato</h5>
-                    <ul class="list-unstyled footer-contact mb-0">
-                        <li>
-                            <i class="fa-brands fa-facebook"></i>
-                            <a href="https://www.facebook.com">Facebook</a>
-                        </li>
-                        <li>
-                            <i class="fa-brands fa-instagram"></i>
-                            <a href="https://www.instagram.com">Instagram</a>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-envelope"></i>
-                            <a href="mailto:dioceliooa@gmail.com">Email</a>
-                        </li>
-                        <li>
-                            <i class="fa-brands fa-youtube"></i>
-                            <a href="https://youtube.com">YouTube</a>
-                        </li>
-                        <li>
-                            <i class="fa-brands fa-whatsapp"></i>
-                            <a href="https://wa.me">WhatsApp</a>
-                        </li>
-                    </ul>
+                        <div class="col-lg-6 col-md-12 mb-4 mb-md-0 ">
+                            <h5 class="text-uppercase">Contato</h5>
+                            <ul class="list-unstyled footer-contact mb-0">
+                                <li>
+                                    <a href="https://www.facebook.com/IPBJacupiranga" class="facebook" target="_blank"><i
+                                            class="fab fa-facebook fa-2x"></i></a>
+                                </li>
+                                <li>
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <a href="https://www.instagram.com">Instagram</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <a href="mailto:dioceliooa@gmail.com">Email</a>
+                                </li>
+                                <li>
+                                    <i class="fa-brands fa-youtube"></i>
+                                    <a href="https://youtube.com">YouTube</a>
+                                </li>
+                                <li>
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    <a href="https://wa.me/55000000000">WhatsApp</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
                 <div class="col-md-5 align-items-center footer-bottom">
                     <span>Todos os direitos reservados - Igreja Presbiteriana do Brasil - Jacupiranga </span>
                 </div>

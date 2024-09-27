@@ -3,7 +3,7 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-require_once 'Assets/db/conexao.php';
+require_once '../Assets/db/conexao.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $login = $_POST['login']; // Nome de usuário ou e-mail
@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </style>
 </head>
 <body>
-    <?php include 'Assets/includes/header.php'; ?>
+    <?php include '../Assets/includes/header.php'; ?>
 
     <div class="container">
         <div class="login-card">
@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </div>
 
-    <?php include 'Assets/includes/footer.php'; ?>
+    <?php include '../Assets/includes/footer.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>

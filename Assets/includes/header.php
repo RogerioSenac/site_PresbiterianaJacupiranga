@@ -2,7 +2,7 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-require_once 'assets/db/conexao.php';
+require_once '../assets/db/conexao.php';
 
 // Verificar se o usuário está logado
 $usuario = null;
@@ -27,7 +27,7 @@ if (isset($_GET['logout'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ministério de Casais - Igreja Palavra de Vida</title>
+    <title>Igreja Presbiterianado Brasil - Jacupiranga</title>
     <!-- Ícone Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Bootstrap CSS -->
@@ -41,7 +41,7 @@ if (isset($_GET['logout'])) {
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid nav_bar">
             <a class="navbar-brand" href="index.php">
-                <img src="assets/img/logotipos/logoipbverdeSF.png" alt="Logotipo Ministério de Casais" class="img-fluid" style="max-height: 100px;">                
+                <img src="../assets/img/logotipos/logoIPBverdeSF.png" alt="Logotipo IPB" class="img-fluid" style="max-height: 100px;">                
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

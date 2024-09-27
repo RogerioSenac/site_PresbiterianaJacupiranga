@@ -41,8 +41,7 @@ if (isset($_GET['logout'])) {
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid nav_bar">
             <a class="navbar-brand" href="index.php">
-                <img src="assets/img/logotipos/sarca-removebg-preview.png" alt="Logotipo Ministério de Casais" class="img-fluid" style="max-height: 100px;"<h1>Igreja Presbiteriana de Jacupiranga </h1>
-                
+                <img src="assets/img/logotipos/logoipbverdeSF.png" alt="Logotipo Ministério de Casais" class="img-fluid" style="max-height: 100px;">                
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

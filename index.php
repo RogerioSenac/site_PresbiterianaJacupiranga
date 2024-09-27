@@ -148,7 +148,7 @@ require_once 'assets/db/conexao.php';
                     <div class="col-md-6">
                         <h4>Venha nos visitar</h4>
                         <ul class="contact-card">
-                            <li><i class="fas fa-map-marker-alt"></i> Rua Vinte e tres de Junho, 262 - Vila Elias, Jacupiranga, SP</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Rua Vinte e Três de Junho, 262 - Vila Elias, Jacupiranga, SP</li>
                             <li><i class="fas fa-envelope"></i> dioceliooa@gmail.com</li>
                             <div class="mt-4">
                                 <h5>Siga-nos nas redes sociais</h5>
@@ -157,7 +157,7 @@ require_once 'assets/db/conexao.php';
                                             class="fab fa-facebook fa-2x"></i></a>
                                     <a href="https://www.instagram.com/ipbjacupiranga?igsh=OXVpZTFka3hkZnY5" class="instagram" target="_blank"><i
                                             class="fab fa-instagram fa-2x"></i></a>
-                                    <a href="https://www.youtube.com" class="youtube"><i
+                                    <a href="https://www.youtube.com/@IpbJacupiranga" class="youtube" target="_blank"><i
                                             class="fab fa-youtube fa-2x"></i></a>
                                     <a href="https://www.whatsapp.com" class="whatsapp" target="_blank"><i
                                             class="fab fa-whatsapp fa-2x"></i></a>
@@ -231,6 +231,4 @@ require_once 'assets/db/conexao.php';
             }
         });
     </script>
-
-teste
 </html>

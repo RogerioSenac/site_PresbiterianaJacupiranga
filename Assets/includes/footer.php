@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Igreja Palavra de Vida</title>
+    <title>Presbiteriana Jacupiranga</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome CSS (para ícones) -->
@@ -34,7 +34,7 @@
                     <ul class="list-unstyled footer-contact mb-0">
                         <li>
                             <i class="fa-brands fa-facebook"></i>
-                            <a href="https://www.facebook.com/IPBJaupiranga">Facebook</a>
+                            <a href="https://www.facebook.com">Facebook</a>
                         </li>
                         <li>
                             <i class="fa-brands fa-instagram"></i>
@@ -42,15 +42,15 @@
                         </li>
                         <li>
                             <i class="fa-solid fa-envelope"></i>
-                            <a href="mailto:contato@ministeriodecasais.com">Email</a>
+                            <a href="mailto:dioceliooa@gmail.com">Email</a>
                         </li>
                         <li>
                             <i class="fa-brands fa-youtube"></i>
-                            <a href="https://www.youtube.com">YouTube</a>
+                            <a href="https://youtube.com">YouTube</a>
                         </li>
                         <li>
                             <i class="fa-brands fa-whatsapp"></i>
-                            <a href="https://wa.me/5513997030261">WhatsApp</a>
+                            <a href="https://wa.me">WhatsApp</a>
                         </li>
                     </ul>
                 </div>

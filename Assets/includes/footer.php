@@ -34,7 +34,7 @@
                     <ul class="list-unstyled footer-contact mb-0">
                         <li>
                             <i class="fa-brands fa-facebook"></i>
-                            <a href="https://www.facebook.com">Facebook</a>
+                            <a href="https://www.facebook.com/IPBJaupiranga">Facebook</a>
                         </li>
                         <li>
                             <i class="fa-brands fa-instagram"></i>
@@ -50,14 +50,14 @@
                         </li>
                         <li>
                             <i class="fa-brands fa-whatsapp"></i>
-                            <a href="https://wa.me/55000000000">WhatsApp</a>
+                            <a href="https://wa.me/5513997030261">WhatsApp</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
                 <div class="col-md-5 align-items-center footer-bottom">
-                    <span>Todos os direitos reservados - Ministério Evangélico Palavra de Vida Registro</span>
+                    <span>Todos os direitos reservados - Igreja Presbiteriana do Brasil - Jacupiranga </span>
                 </div>
             </div>
         </div>

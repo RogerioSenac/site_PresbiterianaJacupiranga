@@ -31,6 +31,13 @@ header {
     background-color: #8c8d8e;
 }
 
+.navbar-brand .img-fluid{
+    display: flex;
+    position: relative;
+    margin-left: 20px;    
+    border-radius: 50%;
+}
+
 /* Corpo */
 main {       
     margin: -8px; /* Remover margens para evitar sobreposições */
@@ -53,7 +60,7 @@ section {
 /* Seção 1: Foto Impactante */
 #foto-impactante {
     margin-top: -100px;
-    background: url('../img/culto2.jpg') no-repeat center center/cover;
+    background: url('../img/imgDiversas/culto2.png') no-repeat center center/cover;
     background-attachment: fixed;    
 }
 

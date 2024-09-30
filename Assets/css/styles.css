@@ -15,6 +15,25 @@ body {
     line-height: 1.6;
 }
 
+h4 {
+color: #fff;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.7); /* Fundo branco com transparência */
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borda sutil */
+    border-radius: 8px; /* Arredondar os cantos */
+    transition: transform 0.3s; /* Efeito de transição suave */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+  }
+  
+
+
+
 /* Cabeçalho (Menu) */
 header {
     position: fixed;
@@ -98,9 +117,6 @@ footer{
     color: white;
     position: relative;
 }
-
-
-
 
 /* Seções dentro do Main */
 section {
@@ -311,19 +327,19 @@ section {
     text-decoration: none;
 }
 
-#contato .social-icons .facebook {
+.social-icons .facebook {
     color: #1877f2; /* Azul do Facebook */
 }
 
-#contato .social-icons .instagram {
+.social-icons .instagram {
     color: #c13584; /* Rosa do Instagram */
 }
 
-#contato .social-icons .youtube {
+.social-icons .youtube {
     color: #ff0000; /* Vermelho do YouTube */
 }
 
-#contato .social-icons .whatsapp {
+.social-icons .whatsapp {
     color: #25d366; /* Verde do WhatsApp */
 }
 
@@ -331,6 +347,7 @@ section {
     font-size: 2rem;
 }
 
+/*Estilo para o card do mapa*/
 
 /* Estilos para o card de depoimentos */
 .depoimentos-card {

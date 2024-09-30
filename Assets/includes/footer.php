@@ -13,9 +13,11 @@
     <link rel="stylesheet" href="Assets/css/styles.css">
     <style>
         footer {
-            background-color: #f8f9fa; /* Cor de fundo do rodapé */
+            background-color: #f8f9fa;
+            /* Cor de fundo do rodapé */
             padding: 20px 0;
         }
+
         .footer-text {
             text-align: center;
             margin-top: 20px;
@@ -26,19 +28,59 @@
 <body>
     <!-- Rodapé -->
     <footer>
-        <div class="container">
-            <div class="row">
+        <!-- <div class="container"> -->
+            <!-- <div class="row"> -->
                 <!-- Venha nos visitar -->
-                <div class="col-lg-4">
+                <!-- <div class="col-lg-4">
                     <h4>Venha nos visitar</h4>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> Rua Vinte e Três de Junho, 262 - Vila Elias, Jacupiranga, SP</li>
                         <li><i class="fas fa-envelope"></i> dioceliooa@gmail.com</li>
                     </ul>
-                </div>
+                </div> -->
 
                 <!-- Siga-nos nas redes sociais -->
-                <div class="col-lg-4">
+                <!-- <div class="col-lg-4">
+                    <h5>Siga-nos nas redes sociais</h5>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/IPBJacupiranga" class="facebook" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="https://www.instagram.com/ipbjacupiranga?igsh=OXVpZTFka3hkZnY5" class="instagram" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="https://www.youtube.com/@IpbJacupiranga" class="youtube" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+                        <a href="https://www.whatsapp.com" class="whatsapp" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
+                    </div>
+                </div> -->
+
+                <!-- Encontre-nos no Mapa -->
+                <!-- <div class="col-lg-4">
+                    <div class="card bg-transparent border-light">
+                        <div class="card-body">
+                            <h4>Encontre-nos no Mapa</h4>
+                            <div id="map" style="color:white; height: 250px; width: 100%;"></div>
+                            <button id="tracarRota" class="btn btn-info mt-3">Traçar Rota</button>
+                        </div>
+                    </div>
+                </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
+
+        <div class="card-group">
+            <div class="card">
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                    <h4>Venha nos visitar</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Rua Vinte e Três de Junho, 262 - Vila Elias, Jacupiranga, SP</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">
+                        <li><i class="fas fa-envelope"></i> dioceliooa@gmail.com</li>
+                    </small>
+                </div>
+            </div>
+            <div class="card">
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-body">
                     <h5>Siga-nos nas redes sociais</h5>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/IPBJacupiranga" class="facebook" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
@@ -47,22 +89,28 @@
                         <a href="https://www.whatsapp.com" class="whatsapp" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
                     </div>
                 </div>
-
-                <!-- Encontre-nos no Mapa -->
-                <div class="col-lg-4">
-                    <div class="card bg-transparent border-light">
-                        <div class="card-body">
-                            <h4>Encontre-nos no Mapa</h4>
-                            <div id="map" style="height: 50px; width: 100%;"></div>
-                            <button id="tracarRota" class="btn btn-info mt-3">Traçar Rota</button>
-                        </div>
-                    </div>
+                <!-- <div class="card-footer">
+                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                </div> -->
+            </div>
+            <div class="card">
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                    <h4>Encontre-nos no Mapa</h4>
+                    <div id="map" style="color:white; height: 250px; width: 100%;"></div>
+                    <button id="tracarRota" class="btn btn-info mt-3">Traçar Rota</button>
                 </div>
+                <!-- <div class="card-footer">
+                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                </div> -->
             </div>
         </div>
-        <div class="footer-text">
+
+
+
+        <!-- <div class="col-lg-12 footer-text">
             <span>Todos os direitos reservados - Igreja Presbiteriana do Brasil - Jacupiranga</span>
-        </div>
+        </div> -->
     </footer>
 
     <!-- Bootstrap JS e Popper.js -->
@@ -88,15 +136,15 @@
             .openPopup();
 
         // Função para traçar a rota no Google Maps
-        document.getElementById('tracarRota').addEventListener('click', function () {
+        document.getElementById('tracarRota').addEventListener('click', function() {
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function (position) {
+                navigator.geolocation.getCurrentPosition(function(position) {
                     var lat = position.coords.latitude;
                     var lon = position.coords.longitude;
                     var destination = "-24.700397865367883, -48.003950472843286"; // Coordenadas da igreja
                     var url = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lon}&destination=${destination}&travelmode=driving`;
                     window.open(url, '_blank');
-                }, function () {
+                }, function() {
                     alert("Não foi possível acessar a localização. Verifique suas permissões de geolocalização.");
                 });
             } else {

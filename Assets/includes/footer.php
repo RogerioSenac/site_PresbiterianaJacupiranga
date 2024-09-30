@@ -73,11 +73,11 @@
                         <li><i class="fas fa-envelope"></i> dioceliooa@gmail.com</li>
                     </ul>
                 </div>
-                <div class="card-footer">
+                <!-- <div class="card-footer">
                     <small class="text-body-secondary">
                     </small>
                 </div>
-            </div>
+            </div> -->
             <div class="card">
                 <!-- <img src="..." class="card-img-top" alt="..."> -->
                 <div class="card-body">

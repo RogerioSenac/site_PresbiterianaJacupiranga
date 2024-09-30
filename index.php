@@ -202,7 +202,7 @@ require_once 'assets/db/conexao.php';
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
     <script>
         // Inicializar o mapa
-        var map = L.map('map').setView([-24.700057803421647, -48.00391461741923], 13);
+        var map = L.map('map').setView([-24.70039696879663, -48.00388768312787], 13);
 
         // Adicionar a camada de mapa
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -210,7 +210,7 @@ require_once 'assets/db/conexao.php';
         }).addTo(map);
 
         // Adicionar marcador
-        L.marker([-24.700057803421647, -48.00391461741923]).addTo(map)
+        L.marker([-24.70039696879663, -48.00388768312787]).addTo(map)
             .bindPopup('Igreja Presbiteriana do Brasil - Jacupiranga<br>Av. 23 de Junho, 262 - Vila Elias, Jacupiranga - SP')
             .openPopup();
 
@@ -220,7 +220,7 @@ require_once 'assets/db/conexao.php';
                 navigator.geolocation.getCurrentPosition(function(position) {
                     var lat = position.coords.latitude;
                     var lon = position.coords.longitude;
-                    var destination = "-24.700057803421647, -48.00391461741923"; // Coordenadas da igreja
+                    var destination = "-24.70039696879663, -48.00388768312787"; // Coordenadas da igreja
                     var url = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lon}&destination=${destination}&travelmode=driving`;
                     window.open(url, '_blank');
                 }, function() {

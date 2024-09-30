@@ -52,7 +52,7 @@ if (isset($_GET['logout'])) {
                         <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'index.php') echo 'active'; ?>" href="index.php">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'sobre.php') echo 'active'; ?>" href="sobre.php">Sobre Nós</a>
+                        <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'sobre.php') echo 'active'; ?>" href="./pages/sobre.php">Sobre Nós</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'eventos.php') echo 'active'; ?>" href="eventos.php">Eventos</a>

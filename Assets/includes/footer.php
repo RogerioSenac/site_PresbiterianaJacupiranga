@@ -11,55 +11,57 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- CSS Personalizado -->
     <link rel="stylesheet" href="Assets/css/styles.css">
+    <style>
+        footer {
+            background-color: #f8f9fa; /* Cor de fundo do rodapé */
+            padding: 20px 0;
+        }
+        .footer-text {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Conteúdo principal da página -->
-    <div class="content">
-        <!-- O conteúdo da sua página vai aqui -->
-    </div>
-
     <!-- Rodapé -->
-    <footer class="text-lg-start">
-        <div class="container p-4">
+    <footer>
+        <div class="container">
             <div class="row">
-                <!-- Logotipo e Créditos -->
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-6 text-md-start mb-3 mb-md-0">
-                            <img src="Assets/img/logoTipos/Logo_PV_Pto.png" alt="Logotipo" class="footer-logo">
-                        </div>
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0 ">
-                    <h5 class="text-uppercase">Contato</h5>
-                    <ul class="list-unstyled footer-contact mb-0">
-                        <li>
-                            <i class="fa-brands fa-facebook"></i>
-                            <a href="https://www.facebook.com">Facebook</a>
-                        </li>
-                        <li>
-                            <i class="fa-brands fa-instagram"></i>
-                            <a href="https://www.instagram.com">Instagram</a>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-envelope"></i>
-                            <a href="mailto:dioceliooa@gmail.com">Email</a>
-                        </li>
-                        <li>
-                            <i class="fa-brands fa-youtube"></i>
-                            <a href="https://youtube.com">YouTube</a>
-                        </li>
-                        <li>
-                            <i class="fa-brands fa-whatsapp"></i>
-                            <a href="https://wa.me">WhatsApp</a>
-                        </li>
+                <!-- Venha nos visitar -->
+                <div class="col-lg-4">
+                    <h4>Venha nos visitar</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Rua Vinte e Três de Junho, 262 - Vila Elias, Jacupiranga, SP</li>
+                        <li><i class="fas fa-envelope"></i> dioceliooa@gmail.com</li>
                     </ul>
+                </div>
+
+                <!-- Siga-nos nas redes sociais -->
+                <div class="col-lg-4">
+                    <h5>Siga-nos nas redes sociais</h5>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/IPBJacupiranga" class="facebook" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="https://www.instagram.com/ipbjacupiranga?igsh=OXVpZTFka3hkZnY5" class="instagram" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="https://www.youtube.com/@IpbJacupiranga" class="youtube" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+                        <a href="https://www.whatsapp.com" class="whatsapp" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
+                    </div>
+                </div>
+
+                <!-- Encontre-nos no Mapa -->
+                <div class="col-lg-4">
+                    <div class="card bg-transparent border-light">
+                        <div class="card-body">
+                            <h4>Encontre-nos no Mapa</h4>
+                            <div id="map" style="height: 50px; width: 100%;"></div>
+                            <button id="tracarRota" class="btn btn-info mt-3">Traçar Rota</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-                <div class="col-md-5 align-items-center footer-bottom">
-                    <span>Todos os direitos reservados - Igreja Presbiteriana do Brasil - Jacupiranga </span>
-                </div>
-            </div>
+        <div class="footer-text">
+            <span>Todos os direitos reservados - Igreja Presbiteriana do Brasil - Jacupiranga</span>
         </div>
     </footer>
 
@@ -68,6 +70,40 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <!-- JS Personalizado -->
     <script src="Assets/js/main.js"></script>
+
+    <!-- Leaflet.js (Mapas) -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script>
+        // Inicializar o mapa
+        var map = L.map('map').setView([-24.700397865367883, -48.003950472843286], 13);
+
+        // Adicionar a camada de mapa
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Adicionar marcador
+        L.marker([-24.700397865367883, -48.003950472843286]).addTo(map)
+            .bindPopup('Igreja Presbiteriana do Brasil - Jacupiranga<br>Av. 23 de Junho, 262 - Vila Elias, Jacupiranga - SP')
+            .openPopup();
+
+        // Função para traçar a rota no Google Maps
+        document.getElementById('tracarRota').addEventListener('click', function () {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var lat = position.coords.latitude;
+                    var lon = position.coords.longitude;
+                    var destination = "-24.700397865367883, -48.003950472843286"; // Coordenadas da igreja
+                    var url = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lon}&destination=${destination}&travelmode=driving`;
+                    window.open(url, '_blank');
+                }, function () {
+                    alert("Não foi possível acessar a localização. Verifique suas permissões de geolocalização.");
+                });
+            } else {
+                alert("Geolocalização não é suportada pelo seu navegador.");
+            }
+        });
+    </script>
 </body>
 
 </html>

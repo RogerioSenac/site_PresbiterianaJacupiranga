@@ -21,10 +21,10 @@ require_once 'assets/db/conexao.php';
     <!-- CSS Personalizado -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 
 <body>
@@ -145,40 +145,39 @@ require_once 'assets/db/conexao.php';
                     </div>
 
                     <!-- Informações de Contato e Mapa -->
-                    <div class="col-md-6">
-                        <h4>Venha nos visitar</h4>
-                        <ul class="contact-card">
-                            <li><i class="fas fa-map-marker-alt"></i> Rua Vinte e Três de Junho, 262 - Vila Elias, Jacupiranga, SP</li>
-                            <li><i class="fas fa-envelope"></i> dioceliooa@gmail.com</li>
-                            <div class="mt-4">
-                                <h5>Siga-nos nas redes sociais</h5>
-                                <div class="social-icons">
-                                    <a href="https://www.facebook.com/IPBJacupiranga" class="facebook" target="_blank"><i
-                                            class="fab fa-facebook fa-2x"></i></a>
-                                    <a href="https://www.instagram.com/ipbjacupiranga?igsh=OXVpZTFka3hkZnY5" class="instagram" target="_blank"><i
-                                            class="fab fa-instagram fa-2x"></i></a>
-                                    <a href="https://www.youtube.com/@IpbJacupiranga" class="youtube" target="_blank"><i
-                                            class="fab fa-youtube fa-2x"></i></a>
-                                    <a href="https://www.whatsapp.com" class="whatsapp" target="_blank"><i
-                                            class="fab fa-whatsapp fa-2x"></i></a>
-                                </div> 
-                            </div>
-                        </ul>
-
-                        <!-- Card com Mapa de Geolocalização -->
+                    <!-- <div class="col-md-6">
+                        
+                        Card com Mapa de Geolocalização
                         <div class="card bg-transparent border-light">
                             <div class="card-body">
-                                <h5 class="card-title">Encontre-nos no Mapa</h5>
-                                <div id="map" style="height: 300px; width: 100%;"></div>
+                                <h4>Encontre-nos no Mapa</h4>
+                                <div id="map" style="height: 50px; width: 100%;"></div>
                                 <button id="tracarRota" class="btn btn-info mt-3">Traçar Rota</button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
+                    <!-- <h4>Venha nos visitar</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Rua Vinte e Três de Junho, 262 - Vila Elias, Jacupiranga, SP</li>
+                        <li><i class="fas fa-envelope"></i> dioceliooa@gmail.com</li>
+                    </ul>
+                    <div class="mt-4">
+                        <h5>Siga-nos nas redes sociais</h5>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/IPBJacupiranga" class="facebook" target="_blank"><i
+                                    class="fab fa-facebook fa-2x"></i></a>
+                            <a href="https://www.instagram.com/ipbjacupiranga?igsh=OXVpZTFka3hkZnY5" class="instagram" target="_blank"><i
+                                    class="fab fa-instagram fa-2x"></i></a>
+                            <a href="https://www.youtube.com/@IpbJacupiranga" class="youtube" target="_blank"><i
+                                    class="fab fa-youtube fa-2x"></i></a>
+                            <a href="https://www.whatsapp.com" class="whatsapp" target="_blank"><i
+                                    class="fab fa-whatsapp fa-2x"></i></a>
+                        </div>  -->
                 </div>
             </div>
+            </div>
         </section>
-
-
+        <?php include './Assets/includes/footer.php'; ?>
     </main>
 
     <!-- Scripts Bootstrap -->
@@ -198,11 +197,11 @@ require_once 'assets/db/conexao.php';
         });
     </script>
 
-    <<!-- Leaflet.js (Mapas) -->
+    <!-- <Leaflet.js (Mapas)
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
     <script>
         // Inicializar o mapa
-        var map = L.map('map').setView([-24.700057803421647, -48.00391461741923], 13);
+        var map = L.map('map').setView([-24.700397865367883, -48.003950472843286], 13);
 
         // Adicionar a camada de mapa
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -210,7 +209,7 @@ require_once 'assets/db/conexao.php';
         }).addTo(map);
 
         // Adicionar marcador
-        L.marker([-24.700057803421647, -48.00391461741923]).addTo(map)
+        L.marker([-24.700397865367883, -48.003950472843286]).addTo(map)
             .bindPopup('Igreja Presbiteriana do Brasil - Jacupiranga<br>Av. 23 de Junho, 262 - Vila Elias, Jacupiranga - SP')
             .openPopup();
 
@@ -220,7 +219,7 @@ require_once 'assets/db/conexao.php';
                 navigator.geolocation.getCurrentPosition(function(position) {
                     var lat = position.coords.latitude;
                     var lon = position.coords.longitude;
-                    var destination = "-24.700057803421647, -48.00391461741923"; // Coordenadas da igreja
+                    var destination = "-24.700397865367883, -48.003950472843286"; // Coordenadas da igreja
                     var url = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lon}&destination=${destination}&travelmode=driving`;
                     window.open(url, '_blank');
                 }, function() {
@@ -230,5 +229,6 @@ require_once 'assets/db/conexao.php';
                 alert("Geolocalização não é suportada pelo seu navegador.");
             }
         });
-    </script>
+    </script> -->
+
 </html>

@@ -2,7 +2,8 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-require_once 'assets/db/conexao.php';
+require_once 'Assets/db/conexao.php';
+
 
 // Verificar se o usuário está logado
 $usuario = null;
@@ -55,7 +56,7 @@ if (isset($_GET['logout'])) {
                         <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'sobre.php') echo 'active'; ?>" href="./pages/sobre.php">Sobre Nós</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'eventos.php') echo 'active'; ?>" href="eventos.php">Eventos</a>
+                        <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'pages/Eventos/eventos.php') echo 'active'; ?>" href="pages/eventos/eventos.php">Eventos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'galeria.php') echo 'active'; ?>" href="galeria.php">Galeria</a>

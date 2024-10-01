@@ -66,6 +66,7 @@
                         <a href="https://www.instagram.com/ipbjacupiranga?igsh=OXVpZTFka3hkZnY5" class="instagram" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
                         <a href="https://www.youtube.com/@IpbJacupiranga" class="youtube" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
                         <a href="https://www.whatsapp.com" class="whatsapp" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
+                        <a href="mailto:dioceliooa@gmail.com" class="email" target="_blank"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>

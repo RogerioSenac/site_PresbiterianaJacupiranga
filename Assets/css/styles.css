@@ -449,7 +449,7 @@ footer{
 
 .card-body-1,
 .card-body-2 {
-    padding: 10px; /* Padding de 10px */
+    padding: 0px; /* Padding de 10px */
     text-align: left; /* Alinhamento à esquerda */
 }
 
@@ -466,8 +466,8 @@ footer{
     border-radius: 8px; /*Arredondar os cantos*/
     transition: transform 0.3s; /*Efeito de transição suave*/
     flex:1; /* Cada card ocupa a mesma largura */
-    margin: 30px; /* Margem horizontal para espaçamento */
-    padding-right: 10px;
+    margin: 10px; /* Margem horizontal para espaçamento */
+    padding-right: 0px;
 }
   
 .card:hover {
@@ -498,6 +498,10 @@ footer{
 
 .social-icons .whatsapp {
     color: #25d366; /* Verde do WhatsApp */
+}
+
+.social-icons .email {
+    color: #000; /* Verde do WhatsApp */
 }
 
 .social-icons i {

@@ -67,7 +67,7 @@
             <div class="card">
                 <!-- <img src="..." class="card-img-top" alt="..."> -->
                 <div class="card-body">
-                    <h4>Venha nos visitar</h4>
+                    <h4>Venha nos visitar.</h4>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> Rua Vinte e Três de Junho, 262 - Vila Elias, Jacupiranga, SP</li>
                         <li><i class="fas fa-envelope"></i> dioceliooa@gmail.com</li>

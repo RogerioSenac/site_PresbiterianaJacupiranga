@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/Assets/css/style.css">
 </head>
 <body>
-    <?php include 'Assets/includes/header.php'; ?>
+    <?php include '../../Assets/includes/header.php'; ?>
 
     <div class="container my-5">
         <h1>Eventos</h1>
@@ -18,7 +18,7 @@
             <!-- Evento 1 -->
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="/Assets/img/evento1.jpg" class="card-img-top" alt="Evento 1">
+                    <img src="../../Assets/img/cruz.jpg" class="card-img-top" alt="Evento 1">
                     <div class="card-body">
                         <h5 class="card-title">Encontro de Casais</h5>
                         <p class="card-text">Data: 15 de Setembro de 2024</p>
@@ -30,7 +30,7 @@
             <!-- Evento 2 -->
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="/Assets/img/evento2.jpg" class="card-img-top" alt="Evento 2">
+                    <img src="/Assets/img/cruz.jpg" class="card-img-top" alt="Evento 2">
                     <div class="card-body">
                         <h5 class="card-title">Retiro Espiritual</h5>
                         <p class="card-text">Data: 30 de Outubro de 2024</p>

@@ -143,20 +143,21 @@ require_once 'assets/db/conexao.php';
                             ?>
                         </div>
                     </div>
+        </section>
+        <!-- Seção 5: Mapa-->
+        <section id="mapa" class="d-flex flex-column align-items-center">
+            <div class="content text-center">
+                <!-- Card com Mapa de Geolocalização -->
+                <div class="card bg-transparent border-light">
+                    <div class="card-mapa">
+                        <h4>Encontre-nos no Mapa</h4>
+                        <div id="map" style="height: 250px; width: 100%;"></div>
+                        <button id="tracarRota" class="btn btn-info mt-3">Traçar Rota</button>
+                    </div>
+                </div>
+        </section>
 
-                    <!-- Informações de Contato e Mapa -->
-                    <!-- <div class="col-md-6">
-                        
-                        Card com Mapa de Geolocalização
-                        <div class="card bg-transparent border-light">
-                            <div class="card-body">
-                                <h4>Encontre-nos no Mapa</h4>
-                                <div id="map" style="height: 50px; width: 100%;"></div>
-                                <button id="tracarRota" class="btn btn-info mt-3">Traçar Rota</button>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- <h4>Venha nos visitar</h4>
+        <!-- <h4>Venha nos visitar</h4>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> Rua Vinte e Três de Junho, 262 - Vila Elias, Jacupiranga, SP</li>
                         <li><i class="fas fa-envelope"></i> dioceliooa@gmail.com</li>
@@ -173,10 +174,12 @@ require_once 'assets/db/conexao.php';
                             <a href="https://www.whatsapp.com" class="whatsapp" target="_blank"><i
                                     class="fab fa-whatsapp fa-2x"></i></a>
                         </div>  -->
-                </div>
-            </div>
-            </div>
-        </section>
+        </div>
+        </div>
+        </div>
+
+
+
         <?php include './Assets/includes/footer.php'; ?>
     </main>
 
@@ -191,13 +194,15 @@ require_once 'assets/db/conexao.php';
                 link.addEventListener('click', (event) => {
                     event.preventDefault();
                     const target = document.querySelector(link.getAttribute('href'));
-                    target.scrollIntoView({ behavior: 'smooth' });
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 });
             });
         });
     </script>
 
-    <!-- <Leaflet.js (Mapas)
+    <!-- Leaflet.js (Mapas) -->
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
     <script>
         // Inicializar o mapa
@@ -229,6 +234,6 @@ require_once 'assets/db/conexao.php';
                 alert("Geolocalização não é suportada pelo seu navegador.");
             }
         });
-    </script> -->
+    </script>
 
 </html>

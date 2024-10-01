@@ -11,7 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- CSS Personalizado -->
     <link rel="stylesheet" href="Assets/css/styles.css">
-    <style>
+    <!-- <style>
         footer {
             background-color: #f8f9fa;
             padding: 20px 0;
@@ -28,10 +28,10 @@
             text-align: left; /* Alinhamento à esquerda */
         }
 
-        .card-body-3 {
+        /* .card-body-3 {
             padding: 10px; /* Padding de 10px */
-            text-align: right; /* Alinhamento à direita */
-        }
+            /*text-align: right; /* Alinhamento à direita */
+        } */
 
         .card-group {
             display: flex;
@@ -42,7 +42,7 @@
             flex: 1; /* Cada card ocupa a mesma largura */
             margin: 0 10px; /* Margem horizontal para espaçamento */
         }
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -69,13 +69,13 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <!-- <div class="card">
                 <div class="card-body-3">
                     <h3>Encontre-nos no Mapa</h3>
                     <div id="map" style="color:white; height: 250px; width: 100%;"></div>
                     <button id="tracarRota" class="btn btn-info mt-3">Traçar Rota</button>
                 </div>
-            </div>
+            </div> -->
         </div>
     </footer>
 
@@ -86,7 +86,7 @@
     <script src="Assets/js/main.js"></script>
 
     <!-- Leaflet.js (Mapas) -->
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <!-- <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
     <script>
         // Inicializar o mapa
         var map = L.map('map').setView([-24.700397865367883, -48.003950472843286], 13);
@@ -117,7 +117,7 @@
                 alert("Geolocalização não é suportada pelo seu navegador.");
             }
         });
-    </script>
+    </script> -->
 </body>
 
 </html>

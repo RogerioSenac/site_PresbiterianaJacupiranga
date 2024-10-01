@@ -19,21 +19,6 @@ h4 {
 color: #fff;
 }
 
-.card {
-    background: rgba(255, 255, 255, 0.7); /* Fundo branco com transparência */
-    backdrop-filter: blur(10px); /* Efeito de desfoque */
-    border: 1px solid rgba(255, 255, 255, 0.5); /* Borda sutil */
-    border-radius: 8px; /* Arredondar os cantos */
-    transition: transform 0.3s; /* Efeito de transição suave */
-  }
-  
-  .card:hover {
-    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
-  }
-  
-
-
-
 /* Cabeçalho (Menu) */
 header {
     position: fixed;
@@ -99,24 +84,7 @@ main {
     position: relative;
 }
 
-/*Rodapé*/
 
-footer{
-    width: 100%;
-    height: 300px;
-    padding: 10px;
-    border: solid red;
-    background-image: url('../img/imgDiversas/gps_smartPhone.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    position: relative;
-}
 
 /* Seções dentro do Main */
 section {
@@ -127,7 +95,8 @@ section {
     justify-content: center;
 }
 
-/* Seção 1: Foto Impactante */
+/************************************ Seção 1: Acesse Site ****************************************/
+/* Foto Impactante */
 #foto-impactante {
     margin-top: -100px;
     background: url('../img/imgDiversas/culto2.png') no-repeat center center/cover;
@@ -156,7 +125,9 @@ section {
     margin-bottom: 20px;
 }
 
-/* Seção 2: Culto Online */
+
+/************************************* Seção 2: Culto Online ***************************************/
+
 #culto-online {
     background-image: url('../img/igrejaonline.png');
     background-size: cover;
@@ -187,7 +158,9 @@ section {
     z-index: 1;
 }
 
-/* Seção 3: Ministérios */
+
+/************************************* Seção 3: Ministerios ***************************************/
+
 #ministerios {
     background-image: url('../img/biblia.jpg');
     background-size: cover;
@@ -250,9 +223,10 @@ section {
     border-radius: 10px;
 }
 
-/* Seção 4: Contato */
+/************************************* Seção 4: Testemunho ***************************************/
+
 #contato {
-    background-image: url('../img/cruz.jpg'); /* Adicione a imagem de fundo desejada */
+    background-image: url('../img/testemunho1.jpg'); /* Adicione a imagem de fundo desejada */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -317,37 +291,6 @@ section {
     color: #e0e7f2; /* Cor ao passar o mouse sobre o ícone */
 }
 
-/* Ícones das redes sociais */
-.social-icons {
-    display: flex;
-    gap: 10px;
-}
-
-.social-icons a {
-    text-decoration: none;
-}
-
-.social-icons .facebook {
-    color: #1877f2; /* Azul do Facebook */
-}
-
-.social-icons .instagram {
-    color: #c13584; /* Rosa do Instagram */
-}
-
-.social-icons .youtube {
-    color: #ff0000; /* Vermelho do YouTube */
-}
-
-.social-icons .whatsapp {
-    color: #25d366; /* Verde do WhatsApp */
-}
-
-.social-icons i {
-    font-size: 2rem;
-}
-
-/*Estilo para o card do mapa*/
 
 /* Estilos para o card de depoimentos */
 .depoimentos-card {
@@ -408,7 +351,6 @@ section {
 }
 
 /* Estilo geral para os depoimentos */
-
 .user-photo {
     width: 60px;
     height: 60px;
@@ -440,25 +382,129 @@ section {
     overflow: hidden;
 }
 
-.map-responsive {
+/************************************** Seção 5: Mapa *****************************************/
+#mapa {
+    background-image: url('../img/imgDiversas/gps_smartPhone.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
     position: relative;
-    height: 0;
-    padding-bottom: 56.25%; /* Proporção de 16:9 */
-    height: 300px;
 }
 
-.map-responsive iframe {
+#mapa .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+#mapa::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+/*Estilo para o card do mapa*/
+.card {
+    background: rgba(255, 255, 255, 0.7); /* Fundo branco com transparência */
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borda sutil */
+    border-radius: 8px; /* Arredondar os cantos */
+    transition: transform 0.3s; /* Efeito de transição suave */
+}
+  
+.card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+}
+  
+
+/************************************* Footer ***************************************/
+
+footer{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    /* border: solid red; */
+    /* background-image: url('../img/imgDiversas/gps_smartPhone.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+/* footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+} */
+
+.footer-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.card-body-1,
+.card-body-2 {
+    padding: 10px; /* Padding de 10px */
+    text-align: left; /* Alinhamento à esquerda */
 }
 
 
+.card-group {
+    display: flex;
+    justify-content: space-between; /* Espaço entre os cards */
+}
 
-/* Responsividade */
+.card {
+    flex:1; /* Cada card ocupa a mesma largura */
+    margin: 0 10px; /* Margem horizontal para espaçamento */
+}
+
+
+/* Ícones das redes sociais */
+.social-icons {
+    display: flex;
+    gap: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+}
+
+.social-icons .facebook {
+    color: #1877f2; /* Azul do Facebook */
+}
+
+.social-icons .instagram {
+    color: #c13584; /* Rosa do Instagram */
+}
+
+.social-icons .youtube {
+    color: #ff0000; /* Vermelho do YouTube */
+}
+
+.social-icons .whatsapp {
+    color: #25d366; /* Verde do WhatsApp */
+}
+
+.social-icons i {
+    font-size: 2rem;
+}
+
+/************************************* Responsividade ***************************************/
+
 @media (max-width: 768px) {
     #contato .social-icons {
         flex-direction: column;
@@ -468,5 +514,22 @@ section {
     #contato .contact-card {
         margin-bottom: 20px; /* Espaço abaixo do card de contato em telas menores */
     }
+
+    .map-responsive {
+        position: relative;
+        height: 0;
+        padding-bottom: 56.25%; /* Proporção de 16:9 */
+        height: 300px;
+    }
+    
+    .map-responsive iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
 }
+    
 

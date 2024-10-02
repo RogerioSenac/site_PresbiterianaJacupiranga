@@ -42,7 +42,7 @@ if (isset($_GET['logout'])) {
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid nav_bar">
             <a class="navbar-brand" href="index.php">
-                <img src="assets/img/logotipos/igreja.png" alt="Logotipo" class="img-fluid" style="max-height: 100px;">                
+                <img src="../../assets/img/logotipos/igreja.png" alt="Logotipo" class="img-fluid" style="max-height: 100px;">                
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

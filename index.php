@@ -148,10 +148,10 @@ require_once 'assets/db/conexao.php';
         <section id="mapa" class="d-flex flex-column align-items-center">
             <div class="content text-center">
                 <!-- Card com Mapa de Geolocalização -->
+                <h4>Encontre-nos no Mapa</h4>
+                <div id="map" style="height: 250px; width: 100%;"></div>
                 <div class="card bg-transparent border-light">
                     <div class="card-mapa">
-                        <h4>Encontre-nos no Mapa</h4>
-                        <div id="map" style="height: 250px; width: 100%;"></div>
                         <button id="tracarRota" class="btn btn-info mt-3">Traçar Rota</button>
                     </div>
                 </div>

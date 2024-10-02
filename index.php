@@ -149,38 +149,15 @@ require_once './Assets/db/conexao.php';
             <div class="content text-center">
                 <!-- Card com Mapa de Geolocalização -->
                 <h4>Encontre-nos no Mapa</h4>
-                <div id="map" style="height: 250px; width: 100%;"></div>
+                <div id="map" style="height: 350px; width: 100%;"></div>
                 <div class="card bg-transparent border-light">
                     <div class="card-mapa">
-                        <button id="tracarRota" class="btn btn-info mt-3">Traçar Rota</button>
+                        <button id="tracarRota" class="btn btn-dark">Traçar Rota</button>
                     </div>
                 </div>
         </section>
-
-        <!-- <h4>Venha nos visitar</h4>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Rua Vinte e Três de Junho, 262 - Vila Elias, Jacupiranga, SP</li>
-                        <li><i class="fas fa-envelope"></i> dioceliooa@gmail.com</li>
-                    </ul>
-                    <div class="mt-4">
-                        <h5>Siga-nos nas redes sociais</h5>
-                        <div class="social-icons">
-                            <a href="https://www.facebook.com/IPBJacupiranga" class="facebook" target="_blank"><i
-                                    class="fab fa-facebook fa-2x"></i></a>
-                            <a href="https://www.instagram.com/ipbjacupiranga?igsh=OXVpZTFka3hkZnY5" class="instagram" target="_blank"><i
-                                    class="fab fa-instagram fa-2x"></i></a>
-                            <a href="https://www.youtube.com/@IpbJacupiranga" class="youtube" target="_blank"><i
-                                    class="fab fa-youtube fa-2x"></i></a>
-                            <a href="https://www.whatsapp.com" class="whatsapp" target="_blank"><i
-                                    class="fab fa-whatsapp fa-2x"></i></a>
-                        </div>  -->
-        </div>
-        </div>
-        </div>
-
-
-
-        <?php include './Assets/includes/footer.php'; ?>
+      
+        <?php include 'footer.php'; ?>
     </main>
 
     <!-- Scripts Bootstrap -->
@@ -188,52 +165,55 @@ require_once './Assets/db/conexao.php';
 
     <!-- Script para rolagem suave -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const links = document.querySelectorAll('a[href^="#"]');
-            links.forEach(link => {
-                link.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    const target = document.querySelector(link.getAttribute('href'));
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+    document.addEventListener('DOMContentLoaded', () => {
+        const links = document.querySelectorAll('a[href^="#"]');
+        links.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
                 });
             });
         });
+    });
     </script>
 
     <!-- Leaflet.js (Mapas) -->
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
     <script>
-        // Inicializar o mapa
-        var map = L.map('map').setView([-24.700397865367883, -48.003950472843286], 13);
+    // Inicializar o mapa
+    var map = L.map('map').setView([-24.700397865367883, -48.003950472843286], 13);
 
-        // Adicionar a camada de mapa
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+    // Adicionar a camada de mapa
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
 
-        // Adicionar marcador
-        L.marker([-24.700397865367883, -48.003950472843286]).addTo(map)
-            .bindPopup('Igreja Presbiteriana do Brasil - Jacupiranga<br>Av. 23 de Junho, 262 - Vila Elias, Jacupiranga - SP')
-            .openPopup();
+    // Adicionar marcador
+    L.marker([-24.700397865367883, -48.003950472843286]).addTo(map)
+        .bindPopup(
+            'Igreja Presbiteriana do Brasil - Jacupiranga<br>Av. 23 de Junho, 262 - Vila Elias, Jacupiranga - SP')
+        .openPopup();
 
-        // Função para traçar a rota no Google Maps
-        document.getElementById('tracarRota').addEventListener('click', function() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    var lat = position.coords.latitude;
-                    var lon = position.coords.longitude;
-                    var destination = "-24.700397865367883, -48.003950472843286"; // Coordenadas da igreja
-                    var url = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lon}&destination=${destination}&travelmode=driving`;
-                    window.open(url, '_blank');
-                }, function() {
-                    alert("Não foi possível acessar a localização. Verifique suas permissões de geolocalização.");
-                });
-            } else {
-                alert("Geolocalização não é suportada pelo seu navegador.");
-            }
-        });
+    // Função para traçar a rota no Google Maps
+    document.getElementById('tracarRota').addEventListener('click', function() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var lat = position.coords.latitude;
+                var lon = position.coords.longitude;
+                var destination = "-24.700397865367883, -48.003950472843286"; // Coordenadas da igreja
+                var url =
+                    `https://www.google.com/maps/dir/?api=1&origin=${lat},${lon}&destination=${destination}&travelmode=driving`;
+                window.open(url, '_blank');
+            }, function() {
+                alert(
+                    "Não foi possível acessar a localização. Verifique suas permissões de geolocalização.");
+            });
+        } else {
+            alert("Geolocalização não é suportada pelo seu navegador.");
+        }
+    });
     </script>
 
 </html>

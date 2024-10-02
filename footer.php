@@ -47,7 +47,7 @@
 
 <body>
     <!-- Rodapé -->
-    <footer>
+    <footer class="rodape">
         <div class="card-group">
             <div class="card">
                 <div class="card-body-1">
@@ -70,13 +70,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="card">
-                <div class="card-body-3">
-                    <h3>Encontre-nos no Mapa</h3>
-                    <div id="map" style="color:white; height: 250px; width: 100%;"></div>
-                    <button id="tracarRota" class="btn btn-info mt-3">Traçar Rota</button>
-                </div>
-            </div> -->
         </div>
     </footer>
 

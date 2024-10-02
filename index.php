@@ -2,7 +2,7 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-require_once 'assets/db/conexao.php';
+require_once './Assets/db/conexao.php';
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ require_once 'assets/db/conexao.php';
 </head>
 
 <body>
-    <?php include 'assets/includes/header.php'; ?>
+    <?php include 'header.php'; ?>
 
     <main>
         <!-- Seção 1: Foto Impactante -->

@@ -1,4 +1,4 @@
-/* Estrutura básica */
+/*************************** Estrutura básica ************************************************************/
 html, body {
     margin: -8px;
     height: 100%;    
@@ -19,7 +19,7 @@ h4 {
 color: #fff;
 }
 
-/* Cabeçalho (Menu) */
+/********************************* Cabeçalho (Menu) **************************************************/
 header {
     position: fixed;
     top: 0;
@@ -31,6 +31,7 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
+
 .nav_bar {
     background-color: #04791fa4;
     
@@ -74,7 +75,7 @@ header {
     transform: translateY(0); /* Move para a posição original no hover */
 }
 
-/* Corpo */
+/***************************************** Corpo *****************************************************/
 main {       
     margin: -8px; /* Remover margens para evitar sobreposições */
     padding: 0;

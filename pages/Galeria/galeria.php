@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/Assets/css/style.css">
 </head>
 <body>
-    <?php include 'Assets/includes/header.php'; ?>
+    <?php include '../../header.php'; ?>
 
     <div class="container my-5">
         <h1>Galeria</h1>
@@ -17,20 +17,20 @@
         <div class="row">
             <!-- Imagem 1 -->
             <div class="col-md-4 mb-4">
-                <a href="/Assets/img/galeria1.jpg" data-bs-toggle="modal" data-bs-target="#imagemModal" data-bs-img="/Assets/img/galeria1.jpg">
-                    <img src="/Assets/img/galeria1.jpg" class="img-fluid" alt="Galeria 1">
+                <a href="../../Assets/img/galeria.jpg" data-bs-toggle="modal" data-bs-target="#imagemModal" data-bs-img="../../Assets/img/galeria.jpg">
+                    <img src="../../Assets/img/galeria.jpg" class="img-fluid" alt="Galeria 1">
                 </a>
             </div>
             <!-- Imagem 2 -->
             <div class="col-md-4 mb-4">
-                <a href="/Assets/img/galeria2.jpg" data-bs-toggle="modal" data-bs-target="#imagemModal" data-bs-img="/Assets/img/galeria2.jpg">
-                    <img src="/Assets/img/galeria2.jpg" class="img-fluid" alt="Galeria 2">
+                <a href="/Assets/img/galeria2.jpg" data-bs-toggle="modal" data-bs-target="#imagemModal" data-bs-img="../../Assets/img/galeria.jpg">
+                    <img src="../../Assets/img/galeria.jpg" class="img-fluid" alt="Galeria 2">
                 </a>
             </div>
             <!-- Imagem 3 -->
             <div class="col-md-4 mb-4">
-                <a href="/Assets/img/galeria3.jpg" data-bs-toggle="modal" data-bs-target="#imagemModal" data-bs-img="/Assets/img/galeria3.jpg">
-                    <img src="/Assets/img/galeria3.jpg" class="img-fluid" alt="Galeria 3">
+                <a href="/Assets/img/galeria3.jpg" data-bs-toggle="modal" data-bs-target="#imagemModal" data-bs-img="../../Assets/img/galeria.jpg">
+                    <img src="../../Assets/img/galeria.jpg" class="img-fluid" alt="Galeria 3">
                 </a>
             </div>
             <!-- Adicione mais imagens conforme necessário -->
@@ -55,7 +55,7 @@
         </div>
     </div>
 
-    <?php include 'Assets/includes/footer.php'; ?>
+    <?php include '../../footer.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>

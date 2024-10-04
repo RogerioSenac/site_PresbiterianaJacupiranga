@@ -1,5 +1,6 @@
 <?php
-include dirname(__DIR__).'../header.php';
+include dirname(__DIR__, 2) . '/header.php';
+
 ?>
 
 <div class="container my-5">

@@ -4,8 +4,8 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 require_once 'Assets/db/conexao.php';
 
-// Defina o caminho base dinamicamente, subindo quantas pastas forem necessárias
-$base_url = ($_SERVER['REQUEST_URI'] == '/') ? '' : '/';
+// Definindo a URL base
+define('BASE_URL', 'site_presbiterianjacupiranga'); // Altere para o caminho correto
 
 // Verificar se o usuário está logado
 $usuario = null;
@@ -36,8 +36,7 @@ if (isset($_GET['logout'])) {
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS Personalizado -->
-    <link rel="stylesheet" href="<?php echo $base_url; ?>assets/css/styles.css">
-
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>Assets/css/style.css">
 </head>
 
 <body>
@@ -45,7 +44,7 @@ if (isset($_GET['logout'])) {
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid nav_bar">
             <a class="navbar-brand" href="index.php">
-                <img src="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . 'assets/img/logotipos/igreja.png'; ?>" alt="Logotipo" class="img-fluid" style="max-height: 100px;">                
+                <img src="<?php echo BASE_URL; ?>assets/img/logotipos/igreja.png" alt="Logotipo" class="img-fluid" style="max-height: 100px;">                
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -53,22 +52,22 @@ if (isset($_GET['logout'])) {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'index.php') echo 'active'; ?>" href="../../index.php">Início</a>
+                        <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'index.php') echo 'active'; ?>" href="<?php echo BASE_URL; ?>index.php">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'sobre.php') echo 'active'; ?>" href="./pages/sobre.php">Sobre Nós</a>
+                        <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'sobre.php') echo 'active'; ?>" href="<?php echo BASE_URL; ?>pages/sobre.php">Sobre Nós</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'pages/Eventos/eventos.php') echo 'active'; ?>" href="pages/eventos/eventos.php">Eventos</a>
+                        <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'pages/Eventos/eventos.php') echo 'active'; ?>" href="<?php echo BASE_URL; ?>pages/eventos/eventos.php">Eventos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'galeria/DashMenuGaleria.php') echo 'active'; ?>" href="galeria/DashMenuGaleria.php">Galeria</a>
+                        <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'galeria.php') echo 'active'; ?>" href="<?php echo BASE_URL; ?>pages/Galeria/galeria.php">Galeria</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'recursos.php') echo 'active'; ?>" href="recursos.php">Recursos</a>
+                        <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'recursos.php') echo 'active'; ?>" href="<?php echo BASE_URL; ?>recursos.php">Recursos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'contato.php') echo 'active'; ?>" href="contato.php">Contato</a>
+                        <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'contato.php') echo 'active'; ?>" href="<?php echo BASE_URL; ?>contato.php">Contato</a>
                     </li>
                 </ul>
                 <?php if (isset($usuario)): ?>

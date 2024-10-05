@@ -548,6 +548,52 @@ section {
     font-size: 2rem;
 }
 
+/************************************ Pasta Pages - SubPasta Galeria******************************/
+#transferencia {
+    background-image: url('../../Assets/img/imgDiversas/cloud2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    /* border: red solid; */
+}
+
+#transferencia .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+#transferencia::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.5); */
+    z-index: 1;
+}
+
+.arquivo{
+    margin-top: -70px;
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
 
 /************************************* Responsividade ***************************************/
 

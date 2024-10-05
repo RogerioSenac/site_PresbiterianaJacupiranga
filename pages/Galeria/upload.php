@@ -6,7 +6,7 @@ include('../../header.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $arquivo = $_FILES['nomearquivo'];
     $tipoArquivo = $arquivo['type'];
-    
+
     // Definir diretórios de upload
     if (strpos($tipoArquivo, 'image/') === 0) {
         $uploadDir = '../galeria/uploadsFotos/';
@@ -47,30 +47,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Assets/CSS/estilo.css">
+    <link rel="stylesheet" href="../../Assets/css/styles.css">
     <title>Projeto IPBJac</title>
 </head>
+
 <body>
-    <div class="etiqueta">
-        <h1>Incluir Arquivos</h1>
-    </div>
-    <div class="container my-4">
-        <form method="POST" enctype="multipart/form-data">
-            <div class="row justify-content-md-center">
-                <div class="col col-lg-12">
-                    <label for="nomearquivo" class="form-label">Arquivo :</label>
-                    <input type="file" class="form-control" id="nomearquivo" name="nomearquivo" accept="image/*,video/*,audio/*" required>
+    <section id="transferencia" class="d-flex align-items-center justify-content-center">
+        <div class="content text-center">
+            <form method="POST" enctype="multipart/form-data">
+                <div class="row justify-content-md-center">
+                    <div class="arquivo col col-lg-8">
+                        <label for="nomearquivo" class="form-label">Arquivo :</label>
+                        <input type="file" class="form-control" id="nomearquivo" name="nomearquivo" accept="image/*,video/*,audio/*" required>
+                    </div>
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-success">Gravar Registro</button>
+                        <a href="galeria.php" class="btn btn-secondary">Voltar</a>
+                    </div>
                 </div>
-                <div class="mb-4">
-                    <button type="submit" class="btn btn-success">Gravar Registro</button>
-                    <a href="galeria.php" class="btn btn-secondary">Voltar</a>
-                </div>
-            </div>
-        </form>
-    </div>
+            </form>
+        </div>
+    </section>
 </body>
+
 </html>

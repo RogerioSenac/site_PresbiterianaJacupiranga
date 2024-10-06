@@ -101,7 +101,7 @@
     </style>
 </head>
 <body>
-    <?php include 'Assets/includes/header.php'; ?>
+    <?php include '../../header.php'; ?>
 
     <div class="container my-5">
         <h1>Sobre o Ministério de Casais</h1>

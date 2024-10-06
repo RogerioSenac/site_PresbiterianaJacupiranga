@@ -560,14 +560,13 @@ section {
     justify-content: center;
     color: white;
     position: relative;
-    /* border: red solid; */
+
 }
 
 #transferencia .container {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    backdrop-filter: blur(5px);
+    /* position: relative; */
+    /* z-index: 2; */
+    /* text-align: center; */
 }
 
 #transferencia::before {

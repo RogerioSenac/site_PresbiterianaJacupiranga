@@ -35,11 +35,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Redirecionar para a página de cadastro com uma mensagem de sucesso
         $ID = $conexao->lastInsertId();
-        header("Location: galeria.php?id=$ID&message=Arquivo incluído com sucesso!");
+        header("Location: upload.php?id=$ID&message=Arquivo incluído com sucesso!");
         exit();
     } else {
         // Redireciona para a página de cadastro com uma mensagem de erro
-        header("Location: galeria.php?message=Erro ao fazer upload do arquivo.");
+        header("Location: upload.php?message=Erro ao fazer upload do arquivo.");
         exit();
     }
 }

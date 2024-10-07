@@ -17,7 +17,7 @@ include dirname(__DIR__, 2) . '/header.php';
         </div>
         <!-- Imagem 2 -->
         <div class="col-md-4 mb-4">
-            <a href="../../Assets/img/galeria2.jpg" data-bs-toggle="modal" data-bs-target="#imagemModal"
+            <a href="/Assets/img/galeria2.jpg" data-bs-toggle="modal" data-bs-target="#imagemModal"
                 data-bs-img="../../Assets/img/galeria.jpg">
                 <img src="../../Assets/img/galeria.jpg" class="img-fluid" alt="Galeria 2">
             </a>

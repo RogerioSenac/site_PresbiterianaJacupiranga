@@ -5,7 +5,7 @@ include dirname(__DIR__, 2) . '/header.php';
 
 <div class="container my-5">
     <h1>Galeria</h1>
-    <p>Veja as fotos e vídeos dos eventos e atividades do Ministério de Casais. Clique nas imagens para ampliar.</p>
+    <p>Veja as fotos, vídeos e audios dos eventos e atividades da Igreja. Clique nas imagens para visualizar as galerias.</p>
 
     <div class="row">
         <!-- Imagem 1 -->

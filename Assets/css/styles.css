@@ -1,6 +1,6 @@
 @import url(https://use.fontawesome.com/releases/v6.4.2/css/all.css);
 
-/*************************** Estrutura básica ************************************************************/
+/************************ Estrutura básica ************************************************************/
 html, body {
     /* margin: -8px; */
     height: 100%;    
@@ -23,7 +23,7 @@ color: #fff;
 
 /********************************* Cabeçalho (Menu) **************************************************/
 header {
-    background-image: url('../img/logoTipos/Igreja.png');
+    background-image: url('../../Assets/img/logoTipos/Igreja.png');
     position: fixed;
     top: 0;
     left: 0;

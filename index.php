@@ -2,7 +2,8 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-require_once './Assets/db/conexao.php';
+require_once('./Assets/db/conexao.php');
+include('header.php'); 
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +20,7 @@ require_once './Assets/db/conexao.php';
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS Personalizado -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="./Assets/css/styles.css">
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
@@ -28,7 +29,7 @@ require_once './Assets/db/conexao.php';
 </head>
 
 <body>
-    <?php include 'header.php'; ?>
+
 
     <main>
         <!-- Seção 1: Foto Impactante -->
@@ -117,7 +118,7 @@ require_once './Assets/db/conexao.php';
                               FROM depoimentos 
                               INNER JOIN usuarios ON depoimentos.usuario_id = usuarios.id 
                               ORDER BY data_inclusao DESC LIMIT 3";
-                            $result = $pdo->query($query);
+                            $result = $conexao->query($query);
 
                             // Verifica se há depoimentos retornados
                             if ($result && $result->rowCount() > 0) {

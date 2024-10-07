@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verifica se o arquivo foi enviado
     if (move_uploaded_file($arquivo['tmp_name'], $caminhoArquivo)) {
         // Prepara e executa a consulta SQL para inserir os dados
-        $smt = $conexao->prepare("INSERT INTO   $tabela(nomearquivo, caminho, tipo, tamanho) VALUES(?, ?, ?, ?)");
+        $smt = $conexao->prepare("INSERT INTO $tabela(nomearquivo, caminho, tipo, tamanho) VALUES(?, ?, ?, ?)");
         $smt->execute([$nomeArquivo, $caminhoArquivo, $tipoArquivo, $arquivo['size']]);
 
         // Redirecionar para a página de cadastro com uma mensagem de sucesso
@@ -62,15 +62,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="content text-center">
             <form method="POST" enctype="multipart/form-data">
                 <div class="row justify-content-md-center">
-                    <div class="arquivo col col-lg-8">
+                    <div class="arquivo col col-lg-12">
                         <label for="nomearquivo" class="form-label">Arquivo :</label>
                         <input type="file" class="form-control" id="nomearquivo" name="nomearquivo"
                             accept="image/*,video/*,audio/*" required>
                     </div>
-                    <div class="mt-4">
-                        <button type="submit" class="btn btn-success">Gravar Registro</button>
-                        <a href="galeria.php" class="btn btn-secondary">Voltar</a>
-                    </div>
+                </div>
+                <div class="botao mt-4 button-spacing">
+                    <button type="submit" class="btn btn-success">Gravar Registro</button>
+                    <a href="galeria.php" class="btn btn-secondary">Voltar</a>
                 </div>
             </form>
         </div>

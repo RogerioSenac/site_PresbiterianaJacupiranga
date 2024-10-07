@@ -582,10 +582,15 @@ section {
 } */
 
 .arquivo{
-    margin-top: -70px;
+    margin-top: -60px;
     margin-bottom: 40px;
+    gap: 100px;
 }
 
+.button-spacing {
+    display: flex;
+    gap: 290px; /* Define o espaço entre os botões */
+}
 
 
 

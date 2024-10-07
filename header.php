@@ -36,7 +36,7 @@ if (isset($_GET['logout'])) {
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS Personalizado -->
-    <link rel="stylesheet" href="<?php echo $base_url; ?>assets/css/styles.css">
+    <link rel="stylesheet" href="<?php echo $base_url; ?>assets/css/styles.css/">
 
 </head>
 

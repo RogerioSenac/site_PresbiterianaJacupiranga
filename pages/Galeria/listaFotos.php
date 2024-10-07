@@ -41,7 +41,7 @@ $files = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <?php foreach ($files as $file): ?>
                     <li>
                         <!-- <?= htmlspecialchars($file['nomearquivo']) ?>  -->
-                        <img src="../Galeria/uploadsFotos/<?= htmlspecialchars($file['nomearquivo']) ?>" alt="Imagem" style="max-width: 100px; max-height: 100px;">
+                        <img src="../Galeria/uploadsFotos/<?= htmlspecialchars($file['nomearquivo']) ?>" alt="Imagem" style="max-width: 80px; max-height: 80px;">
                     </li>
                 <?php endforeach; ?>
             </ul>

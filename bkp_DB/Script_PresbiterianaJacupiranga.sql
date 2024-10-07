@@ -67,5 +67,8 @@ CREATE TABLE audios (
     data_upload DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+select * from fotos;
+select * from videos;
+select * from audios;
 
-
+DELETE FROM fotos WHERE id = 1;

@@ -51,7 +51,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../../Assets/css/styles.css">
     <title>Projeto IPBJac</title>
 </head>
@@ -63,7 +64,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="row justify-content-md-center">
                     <div class="arquivo col col-lg-8">
                         <label for="nomearquivo" class="form-label">Arquivo :</label>
-                        <input type="file" class="form-control" id="nomearquivo" name="nomearquivo" accept="image/*,video/*,audio/*" required>
+                        <input type="file" class="form-control" id="nomearquivo" name="nomearquivo"
+                            accept="image/*,video/*,audio/*" required>
                     </div>
                     <div class="mt-4">
                         <button type="submit" class="btn btn-success">Gravar Registro</button>

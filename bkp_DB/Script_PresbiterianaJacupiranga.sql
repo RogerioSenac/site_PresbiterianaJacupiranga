@@ -40,12 +40,32 @@ CREATE TABLE depoimentos (
 
 select * from depoimentos;
 
-CREATE TABLE galeria (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    filename varchar(255) NOT NULL,
-    mime_type varchar(50) NOT NULL,
-    upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE fotos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nomearquivo VARCHAR(255),
+    caminho VARCHAR(255),
+    tipo VARCHAR(255),
+    tamanho INT,
+    data_upload DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
-select * from galeria;
+CREATE TABLE videos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nomearquivo VARCHAR(255),
+    caminho VARCHAR(255),
+    tipo VARCHAR(255),
+    tamanho INT ,
+    data_upload DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE audios (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nomearquivo VARCHAR(255),
+    caminho VARCHAR(255),
+    tipo VARCHAR(255),
+    tamanho INT,
+    data_upload DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+
 

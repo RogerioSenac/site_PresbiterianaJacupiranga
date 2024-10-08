@@ -37,7 +37,7 @@ include('header.php');
             <div class="overlay"></div>
             <div class="content text-center">
                 <h1 class="text-white">Bem-vindo à Igreja Presbiteriana do Brasil - Jacupiranga</h1>
-                <a href="#culto-online" class="btn btn-primary">Acessar Site</a>
+                <!-- <a href="#culto-online" class="btn btn-primary">Acessar Site</a> -->
             </div>
         </section>
 

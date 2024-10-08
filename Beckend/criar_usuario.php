@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'Assets/db/conexao.php';
+require_once '../Assets/db/conexao.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Coleta e validação dos dados do formulário
@@ -63,6 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -76,10 +77,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
         }
+
         .card-title {
             font-size: 1.5rem;
             color: #0056b3;
         }
+
         .btn-modern {
             background-color: #0056b3;
             color: white;
@@ -92,11 +95,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             border: none;
             cursor: pointer;
         }
+
         .btn-modern:hover {
             background-color: #003f7f;
             color: #fff;
             transform: translateY(-2px);
         }
+
         .btn-modern:active {
             background-color: #002b5c;
             transform: translateY(1px);
@@ -114,8 +119,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     </script>
 </head>
+
 <body>
-    <?php include 'Assets/includes/header.php'; ?>
+    <?php include '../header.php'; ?>
 
     <div class="container my-5">
         <h1>Criar Conta</h1>
@@ -135,17 +141,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <input type="text" id="nome" name="nome" class="form-control" required>
                     </div>
                     <div class="col-md-6">
-                        <label for="estado_civil" class="form-label">Estado Civil</label>
-                        <select id="estado_civil" name="estado_civil" class="form-select" required onchange="toggleConjugeField()">
-                            <option value="Casado">Casado</option>
-                            <option value="Solteiro" selected>Solteiro</option>
-                        </select>
+                        <label for="usuario" class="form-label">Nome de Usuário</label>
+                        <input type="text" id="usuario" name="usuario" class="form-control" required>
                     </div>
-                </div>
-                <div id="conjuge_field" class="row mb-3" style="display: none;">
-                    <div class="col-md-12">
-                        <label for="nome_conjuge" class="form-label">Nome do Cônjuge</label>
-                        <input type="text" id="nome_conjuge" name="nome_conjuge" class="form-control">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="estado_civil" class="form-label">Estado Civil</label>
+                            <select id="estado_civil" name="estado_civil" class="form-select" required
+                                onchange="toggleConjugeField()">
+                            </select>
+                        </div>
+                        <div id="conjuge_field" class="row mb-3" style="display: none;">
+                            <label for="nome_conjuge" class="form-label">Nome do Cônjuge</label>
+                            <input type="text" id="nome_conjuge" name="nome_conjuge" class="form-control">
+                        </div>
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -163,10 +172,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <label for="endereco" class="form-label">Endereço</label>
                         <input type="text" id="endereco" name="endereco" class="form-control" required>
                     </div>
-                    <div class="col-md-6">
-                        <label for="usuario" class="form-label">Nome de Usuário</label>
-                        <input type="text" id="usuario" name="usuario" class="form-control" required>
-                    </div>
+
                 </div>
                 <div class="row mb-3">
                     <div class="col-md-6">
@@ -175,7 +181,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                     <div class="col-md-6">
                         <label for="senha_confirmacao" class="form-label">Confirme a Senha</label>
-                        <input type="password" id="senha_confirmacao" name="senha_confirmacao" class="form-control" required>
+                        <input type="password" id="senha_confirmacao" name="senha_confirmacao" class="form-control"
+                            required>
                     </div>
                 </div>
                 <div class="mb-3">
@@ -184,16 +191,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" id="receber_informacoes" name="receber_informacoes" class="form-check-input">
-                    <label for="receber_informacoes" class="form-check-label">Desejo receber informações sobre eventos e novidades da Igreja Palavra de Vida Registro</label>
+                    <label for="receber_informacoes" class="form-check-label">Desejo receber informações sobre eventos e
+                        novidades da Igreja Palavra de Vida Registro</label>
                 </div>
                 <button type="submit" class="btn btn-modern">Cadastrar</button>
             </form>
         </div>
     </div>
 
-    <?php include 'Assets/includes/footer.php'; ?>
+    <?php include '../footer.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>

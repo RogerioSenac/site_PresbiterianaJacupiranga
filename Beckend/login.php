@@ -3,7 +3,7 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-require_once 'Assets/db/conexao.php';
+require_once '../Assets/db/conexao.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $login = $_POST['login']; // Nome de usuário ou e-mail

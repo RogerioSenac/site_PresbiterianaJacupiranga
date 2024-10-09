@@ -1,10 +1,9 @@
 <?php
-include dirname(__DIR__, 2) .'/header.php';
+$rooturl = '../../header.php';
+include($rooturl);
 
 ?>
-<header>
-    
-</header>
+
 <div class="container my-5">
     <h1>Galeria</h1>
     <p>Veja as fotos, vídeos e audios dos eventos e atividades da Igreja. Clique nas imagens para visualizar as galerias.</p>

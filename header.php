@@ -1,17 +1,18 @@
 <?php
+$rooturl = '/Projetos%20Git/site_PresbiterianaJacupiranga/';
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 require_once 'Assets/db/conexao.php';
 
-// Defina o caminho base dinamicamente, subindo quantas pastas forem necessárias
-$base_url = ($_SERVER['REQUEST_URI'] == '/') ? '' : '/';
+// // Defina o caminho base dinamicamente, subindo quantas pastas forem necessárias
+// $base_url = ($_SERVER['REQUEST_URI'] == '/') ? '' : '/';
 
 // Verificar se o usuário está logado
 $usuario = null;
 
 if (isset($_SESSION['usuario_id'])) {
-    $stmt = $pdo->prepare("SELECT nome, foto FROM usuarios WHERE id = ?");
+    // $stmt = $pdo->conexao("SELECT nome, foto FROM usuarios WHERE id = ?");
     $stmt->execute([$_SESSION['usuario_id']]);
     $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 }
@@ -22,6 +23,7 @@ if (isset($_GET['logout'])) {
     header('Location: index.php'); // Redireciona para a página de login após o logout
     exit();
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -35,15 +37,12 @@ if (isset($_GET['logout'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- CSS Personalizado -->
-    <link rel="stylesheet" href="/assets/css/styles.css/">
-    <link rel="stylesheet" href="./Assets/css/styles.css/">
-    <link rel="stylesheet" href="../Assets/css/styles.css/">
-    <link rel="stylesheet" href="../../Assets/css/styles.css/">
 
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" type='text/css' href="<?php echo $rooturl; ?>assets/css/styles.css">    
 </head>
 
-<body>
+<body>    
     <!-- Cabeçalho e Navegação -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid nav_bar">
@@ -93,6 +92,4 @@ if (isset($_GET['logout'])) {
 
     <!-- Scripts Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
 
-</html>

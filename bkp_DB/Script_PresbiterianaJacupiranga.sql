@@ -71,4 +71,31 @@ select * from fotos;
 select * from videos;
 select * from audios;
 
-DELETE FROM fotos WHERE id = 1;
+CREATE TABLE usuarios (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome varchar(255),
+    nome_usuario varchar(255),
+    estado_civil enum('Selecione uma opção','Casado(a)', 'Solteriro(a)' , 'Viuvo(a)') default "Selecione uma opção",
+    nome_conjuge varchar(255),
+    telefone varchar(15),
+    email varchar(255),
+    rua varchar(255),
+    bairro varchar(255),
+    cidade varchar(255),
+    estado varchar(5),
+    cep varchar(10),
+    fotoUsuario varchar(255),
+    receber_informacoes tinyint(1),
+    tipo enum('admin', 'usuario'),
+    ativo tinyint(1),
+    data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+create table depoimentos (
+id int primary key auto_increment,
+nome_usuario int,
+depoimento text,
+data_inclusao datetime default current_timestamp,
+ativo tinyint(1)
+);
+

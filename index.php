@@ -150,7 +150,7 @@ include('header.php');
             <div class="content text-center">
                 <!-- Card com Mapa de Geolocalização -->
                 <h4>Encontre-nos no Mapa</h4>
-                <div id="map" style="height: 350px; width: 100%;"></div>
+                <div id="map" style="height: 250px; width: 100%;"></div>
                 <div class="card bg-transparent border-light">
                     <div class="card-mapa">
                         <button id="tracarRota" class="btn btn-dark">Traçar Rota</button>

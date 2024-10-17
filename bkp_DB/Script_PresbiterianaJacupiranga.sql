@@ -99,3 +99,6 @@ data_inclusao datetime default current_timestamp,
 ativo tinyint(1)
 );
 
+select * from audios;
+use ministerio_casais;
+

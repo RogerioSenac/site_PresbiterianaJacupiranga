@@ -1,3 +1,7 @@
+<?php 
+include('../site_PresbiterianaJacupiranga/header.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,7 +12,6 @@
     <link rel="stylesheet" href="/Assets/css/style.css">
 </head>
 <body>
-    <?php include 'Assets/includes/header.php'; ?>
 
     <div class="container my-5">
         <h1>Recursos</h1>

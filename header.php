@@ -67,7 +67,7 @@ if (isset($_GET['logout'])) {
                         <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'pages/Galeria') echo 'active'; ?>" href="pages/Galeria">Galeria</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'recursos.php') echo 'active'; ?>" href="recursos.php">Recursos</a>
+                        <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'recursos.php') echo 'active'; ?>" href="./pages/Recursos/recursos.php">Recursos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link <?php if (basename($_SERVER['PHP_SELF']) == 'contato.php') echo 'active'; ?>" href="contato.php">Contato</a>

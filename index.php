@@ -114,9 +114,9 @@ include('header.php');
                             include 'Assets/db/conexao.php';
 
                             // Consulta para buscar todos os depoimentos
-                            $query = "SELECT usuarios.nome, usuarios.foto, depoimentos.data_inclusao, depoimentos.depoimento 
+                            $query = "SELECT usuarios.nome, usuarios.fotoUsuario, depoimentos.data_inclusao, depoimentos.depoimento 
                               FROM depoimentos 
-                              INNER JOIN usuarios ON depoimentos.usuario_id = usuarios.id 
+                              INNER JOIN usuarios ON depoimentos.id = usuarios.id 
                               ORDER BY data_inclusao DESC LIMIT 3";
                             $result = $conexao->query($query);
 
